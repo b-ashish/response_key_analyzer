@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marks Analyzer </title>
+    <h1 style="text-align: center;color: rgb(227, 31, 198);"> Welcome to Mark Analyzer</h1>
+    </head>
+
+    <div class="instruction"; style="float: unset;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        **This app only work on 
+        response link provided 
+        by TCS for now**
+    </div>
+
+    <body style="background-image: url(https://cdn.pixabay.com/photo/2016/08/26/15/54/checklist-1622517_1280.png);
+    background-size: cover;
+    background-repeat: no-repeat;">
+
+    <p>
+    <div class="form_url_paste" style="width: fit-content;text-align: center;justify-content: center;">
+        <form class="mrk_analyze" method="POST"    action="{{url_for('analyze')}}">
+            <fieldset style="color: rgb(165, 16, 13);background-color: rgb(241, 212, 148);">
+        <legend style="background-color:  rgb(241, 212, 148);"><strong>Paste your link below</strong> </legend>
+        <input type="url" name="response_link" id="response_link" style="position: relative;align-items: stretch;">
+        <input type="submit" name="Analyze"  style="color: brown;">
+            </fieldset>
+        </form>
+    </div>
+    </p>
+
+    <p>
+    <div class="html_upload_form" style="width: fit-content;text-align: center;justify-content: center;">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <fieldset style="background-color: rgb(241, 212, 148);">
+                <legend style="text-align: center;color: rgb(165, 16, 13);
+                    background-color: rgb(241, 212, 148);"><strong>You can also Upload HTML file to analyze </strong></legend>
+                    <label for="fileInput">Select a file to upload</label>
+                <input style="color: rgb(103, 25, 220);" type="file" id="fileInput" name="fileInput" accept=".html">
+                <input type="submit" style="color: brown;" value="Upload"> 
+            </fieldset>
+        </form>
+    </div>
+    </p>
+
+</body>
+</html>

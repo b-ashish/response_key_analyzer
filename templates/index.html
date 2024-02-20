@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtained Marks Distribution </title>
+    <h1 style="color: aqua;text-align: center;">Obtained Marks Distribution </h1>
+</head>
+<body style="background-image: url(https://img.freepik.com/free-photo/3d-rendering-pen-ai-generated_23-2150695409.jpg?size=626&ext=jpg&uid=R138232052&ga=GA1.1.1235867597.1708125496&semt=ais_ai_generated);
+background-repeat: no-repeat;
+background-size: cover;">
+
+
+    
+    <style>
+      /* Define styles for the table */
+      .Student_info {
+        float: left;
+        width: fit-content;
+        border-collapse: separate;
+        margin-bottom: 30px;
+      }
+    
+      .Student_info th,.Student_info td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #dc9c26; /* Add a bottom border to separate rows */
+      }
+    
+      /* Define alternating row colors for better readability */
+      .Student_info tr:nth-child(even) {
+        background-color: #82de76; /* Light gray background for even rows */ 
+      }
+      .Student_info tr:nth-child(odd) {
+        background-color: #82de76; /* Light gray background for even rows */ 
+      }
+      .Student_info tr:nth-child(1) {
+        background-color: #82de76; /* Light gray background for even rows */
+      }
+
+      /* Define colors for table header */
+      .Student_info th {
+        background-color: #a8e1a8; /* Dark green background for header cells */
+        color: rgb(142, 18, 18); /* White text color for header cells */
+      }
+    </style>
+    <div class="Student_info">
+  
+    {{table_cand_info | safe}}
+
+    </div>
+
+    <style>
+        /* Define styles for the table */
+        .Marks_distribution_table {
+          float: right;
+          width: fit-content;
+          border-collapse: separate;
+          margin-bottom: 20px;
+        }
+      
+        .Marks_distribution_table th,.Marks_distribution_table td {
+          padding: 12px;
+          text-align: left;
+          border-bottom: 1px solid #dc9c26; /* Add a bottom border to separate rows */
+        }
+      
+        /* Define alternating row colors for better readability */
+        .Marks_distribution_table tr:nth-child(even) {
+          background-color: #82de76; /* Light gray background for even rows */ 
+        }
+        .Marks_distribution_table tr:nth-child(1) {
+          background-color: #82de76; /* Light gray background for even rows */
+        }
+
+        .Marks_distribution_table tr:nth-child(3) {
+          background-color: #e42c2c; /* Light gray background for even rows */
+        }
+
+        .Marks_distribution_table tr:nth-child(4) {
+          background-color: #e6e949; /* Light gray background for even rows */
+        }
+
+        /* Define colors for table header */
+        .Marks_distribution_table th {
+          background-color: #a8e1a8; /* Dark green background for header cells */
+          color: rgb(142, 18, 18); /* White text color for header cells */
+        }
+      </style>
+    <div class="Marks_distribution_table">
+      {{ table_html | safe }}
+    </div>
+    
+    <div class="marks_display", style="display:inline-block; text-align: center;">
+        <h1 style="color: rgb(232, 232, 31);">Marks obtained is {{result}}</h1>
+    <div class="go_back", style="display: block;">
+        <b><a style="color: rgb(240, 34, 55);background-color: #74e6e6;" href='/'>GO BACK TO HOME</a></b>
+    </div>
+    <div class="ans_analyze" style="display: block;">
+        <b></b><b><button style="color: rgb(240, 34, 55);"><a style="color: blueviolet;" href="/Ans_analyze"> View Answers </a> </button></b></div></b>
+    </div>
+    <style>
+        .image-container {
+            margin: 10px;
+            border: 1px solid #ddd; /* Add a border around the image container */
+            border-radius: 5px; /* Optional: Add rounded corners */
+            overflow: hidden; /* Hide any overflow content (like large images) */
+            float: left; /* Float the images side by side */
+        }
+
+        .image-container img {
+            width: 100%; /* Make the image fill the container */
+            height: auto; /* Maintain the aspect ratio */
+            display: block; /* Remove any extra spacing below the image */
+        }
+    </style>
+
+        {% for img in img_paths %}
+        <div class="image-container">
+            <img src="{{img}}" alt="Image"; sizes="width">
+        </div>
+        {% endfor %}>
+
+
+</body>
+</html>
