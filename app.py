@@ -32,10 +32,10 @@ def upload_analyz():
         data = f.read()
     section = Section_Analyze()
     df, marks_obt = section.Dataframe(data)
-    candidate_info = {"Name":'Sonam',"Id":123546,"Marks":45}
+    candidate_info = "No data"
     candidate_info = section.Student_info(data)
     bg_analysis = section.Ans_Analyze(data)
-    return render_template("index.html",table_cand_info = candidate_info ,
+    return render_template("index.html",table_cand_info = candidate_info,
                            table_html=df,result = marks_obt,img_paths = img_paths)
 
 @app.route("/input",methods =['get','POST'])
@@ -81,4 +81,4 @@ def full_ans():
     return render_template("full_analyz.html")
 
 if __name__ =="__main__":
-    app.run (host="0.0.0.0",port=8080, debug=True)
+    app.run (host="127.0.1.1",port=8080, debug=True)
