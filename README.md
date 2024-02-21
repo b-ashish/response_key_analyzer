@@ -37,34 +37,34 @@ The Exam Response Analyzer is more than a tool; it's a companion for students na
 ## Installation:(windows)
 
 1. clone git repo:
- ''' bash
+```bash
  git clone https://github.com/b-ashish/response_key_analyzer.git
- '''
+ ```
 
 2. Navigate to project repo:
- ''' bash
+```bash
  cd response_key_analyzer
- ''' 
+``` 
 
 3. Creating Virtual Env:
- ''' bash
+ ```bash
  python -m venv rka_env
  .\rka_env\Scripts\activate
- '''
+ ```
   - If you have venv in anaconda then :
-    ''' bash
+    ``` bash
     conda create --name rka_env
     conda activate rka_env
-    '''
+    ```
 
 4. Installing dependencies:
-''' bash
+``` bash
 pip install -r requirements.txt
-'''
+```
 
 5. Run app:
-''' bash
+``` bash
 python app.py
-'''
+```
 
 Now click on server link showed on bash and analyze your marks
