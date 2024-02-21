@@ -1,0 +1,11 @@
+kivy
+buildozer
+pandas
+numpy
+beautifulsoup4
+requests
+matplotlib
+PyWavelets
+scipy
+sympy
+flask
